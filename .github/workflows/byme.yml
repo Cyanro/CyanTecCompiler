@@ -1,4 +1,5 @@
 name: byme
+on:
   workflow_dispatch:
 
 env:
