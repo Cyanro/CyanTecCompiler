@@ -1,6 +1,4 @@
-name: OpenWrt Builder
-
-on:
+name: byme
   workflow_dispatch:
 
 env:
