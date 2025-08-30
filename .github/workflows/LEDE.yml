@@ -1,7 +1,7 @@
 name: LEDE_Compiler
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: workflow_dispatch
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
