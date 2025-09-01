@@ -1,4 +1,4 @@
-name: byme
+name: olede_JCG
 on:
   workflow_dispatch:
 
