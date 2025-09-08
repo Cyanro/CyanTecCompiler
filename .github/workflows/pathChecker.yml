@@ -12,8 +12,8 @@ jobs:
 
     - name: downloadfile 
       run: |
-       ls -a $PWD
-       pwd
+       ll -a $PWD
+       PWD
 
     - name: checkONE
       run: |
@@ -24,7 +24,10 @@ jobs:
 
     - name: checkTWO
       working-directory: /demo
-      run: echo $PWD
+      run: |
+       echo $PWD
+       pwd
+
       
     - name: checkThree
       run: echo $PWD
