@@ -1,4 +1,4 @@
-name: check the path
+name: pathChecker
 on: 
   workflow_dispatch:
 env:
