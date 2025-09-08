@@ -9,8 +9,9 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@main
-      run: PWD
-      run: ll -a $PWD
+      run: |
+       ll -a $PWD
+       PWD
 
     - name: checkONE
       run: |
@@ -19,7 +20,7 @@ jobs:
         sudo chown $USER:$GROUPS /demo
 
     - name: checkTWO
-      working-directory: /workdir
+      working-directory: /demo
       run: echo $PWD
       
     - name: checkThree
