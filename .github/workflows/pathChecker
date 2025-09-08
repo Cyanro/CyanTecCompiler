@@ -1,0 +1,37 @@
+name: check the path
+on: 
+  workflow_dispatch:
+env:
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
+  CONFIG_FILE: .config
+  DIY_P1_SH: diy-part1.sh
+  DIY_P2_SH: diy-part2.sh
+  UPLOAD_BIN_DIR: false
+  UPLOAD_FIRMWARE: true
+  UPLOAD_RELEASE: true
+  TZ: Asia/Shangha
+jobs:
+  pathChecker:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@main
+      run: PWD
+      run: ll -a $PWD
+
+    - name: checkONE
+      run: |
+        echo $PWD
+        mkdir -p /demo
+        sudo chown $USER:$GROUPS /demo
+
+
+    - name: checkTWO
+      working-directory: /workdir
+      run: echo $PWD
+
+    - name: checkThree
+      run: echo $PWD
