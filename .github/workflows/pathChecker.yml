@@ -13,7 +13,7 @@ jobs:
     - name: downloadfile 
       run: |
        ll -a $PWD
-       PWD
+       pwd
 
     - name: checkONE
       run: |
