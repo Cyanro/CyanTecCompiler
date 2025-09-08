@@ -1,5 +1,5 @@
 name: pathChecker
-on: 
+on:
   workflow_dispatch:
 
 jobs:
@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@main
+
+    - name: downloadfile 
       run: |
        ll -a $PWD
        PWD
@@ -16,6 +18,7 @@ jobs:
     - name: checkONE
       run: |
         echo $PWD
+        pwd
         mkdir -p /demo
         sudo chown $USER:$GROUPS /demo
 
