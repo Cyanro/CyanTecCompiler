@@ -39,7 +39,7 @@ jobs:
 
     - name: last
       run: |
-      sudo mkdir -p /mnt/workdir
-      sudo chown $USER:$GROUPS /mnt/workdir
-      ln -sf $GITHUB_WORKSPACE /mnt/workdir
-      ls -a $PWD
+        sudo mkdir -p /mnt/workdir
+        sudo chown $USER:$GROUPS /mnt/workdir
+        ln -sf $GITHUB_WORKSPACE /mnt/workdir
+        ls -a $PWD
