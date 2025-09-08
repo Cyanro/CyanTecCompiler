@@ -30,7 +30,10 @@ jobs:
 
       
     - name: checkThree
-      run: echo $PWD
+      run: |
+        echo $GITHUB_WORKSPACE
+        echo $PWD
+      
 
     - name: creatfile
       run: | 
@@ -43,4 +46,3 @@ jobs:
         sudo chown $USER:$GROUPS /mnt/workdir
         ln -sf $GITHUB_WORKSPACE /mnt/workdir
         ls -a /mnt/workdir
-
