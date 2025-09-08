@@ -19,7 +19,7 @@ jobs:
       run: |
         echo $PWD
         pwd
-        mkdir -p /demo
+        sudo mkdir -p /demo
         sudo chown $USER:$GROUPS /demo
 
     - name: checkTWO
